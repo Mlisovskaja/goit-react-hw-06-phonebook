@@ -1,17 +1,17 @@
 import { useSelector, useDispatch } from 'react-redux';
 
-import PhonebookForm from './Phonebook/PhonebookForm';
-import Filter from './Phonebook/Filter';
-import ContactsList from './Phonebook/ContactsList';
+import PhonebookForm from '../Phonebook/PhonebookForm';
+import Filter from '../Phonebook/Filter';
+import ContactsList from '../Phonebook/ContactsList';
 
-import { addContact, deleteContact } from './redux/contacts/contacts-slice';
-import { setFilter } from './redux/filter/filter-slice';
+import { addContact, deleteContact } from '../redux/contacts/contacts-slice';
+import { setFilter } from '../redux/filter/filter-slice';
 
 import {
   getAllContacts,
   getFilteredContacts,
-} from './redux/contacts/contacts-selectors';
-import { getFilter } from './redux/filter/filter-selectors';
+} from '../redux/contacts/contacts-selectors';
+import { getFilter } from '../redux/filter/filter-selectors';
 
 const ContactsPage = () => {
   const filteredContacts = useSelector(getFilteredContacts);
